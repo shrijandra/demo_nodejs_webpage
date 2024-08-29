@@ -30,4 +30,3 @@ workflows:
     jobs:
       - run_test
       - build_docker_image
-
