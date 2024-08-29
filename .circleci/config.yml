@@ -19,7 +19,8 @@ jobs:
       - run:
           name: build_docker_image
           command: |
-            #export TAG=0.2.<<pipeline.number>>
+            #export TAG=0.2.<<pipeline.number>> 
+            #test
             docker build -t nodejswebapp -t shrijandra/nodejswebapp:latest .
             echo $DOCKER_PASSWORD | docker login -u shrijandra --password-stdin
             docker push shrijandra/nodejswebapp:latest
